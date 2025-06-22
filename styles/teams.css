@@ -1,0 +1,224 @@
+/* Teams Page Specific Styles */
+:root {
+    --card-width: 300px;
+    --card-height: 400px;
+    --trend-height: 100px;
+}
+
+/* Filters Section */
+.filters-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#team-search {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-controls select {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 0.9em;
+}
+
+/* Teams Grid */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Team Card */
+.team-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-header {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.team-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.team-stats {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.stat-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat label {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.stat value {
+    color: var(--primary-color);
+}
+
+.team-trends {
+    padding: 15px;
+    background-color: var(--secondary-color);
+}
+
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.trend {
+    text-align: center;
+    padding: 5px;
+    background-color: var(--white);
+    border-radius: 4px;
+}
+
+.team-actions {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    background-color: var(--white);
+}
+
+.team-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.team-actions button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Betting Trends Section */
+.betting-trends-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+.betting-trends-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#league-trends {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.trend-card {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    height: var(--trend-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trend-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.trend-label {
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-controls select {
+        width: 100%;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        height: auto;
+        min-height: var(--card-height);
+    }
+
+    .trends-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-actions {
+        flex-direction: column;
+    }
+
+    .team-actions button {
+        width: 100%;
+    }
+}

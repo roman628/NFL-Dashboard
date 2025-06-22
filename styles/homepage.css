@@ -1,0 +1,168 @@
+/* homepage.css */
+
+body {
+    background: url('../images/fieldBackground.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+.menu {
+    background-color: var(--primary-color);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.games-grid,
+.teams-grid,
+.players-grid,
+.insights-grid,
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.entry-section {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+}
+
+.entry-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.entry-name {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px;
+    text-align: center;
+}
+
+/* some random stuff so the team logos dont go crazy */
+
+/* Team Card Grid Layout */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Team Logo Size Control */
+.team-logo {
+    width: 80px;  /* Fixed width */
+    height: 80px; /* Fixed height */
+    object-fit: contain; /* Maintains aspect ratio */
+    margin: 10px;
+}
+
+/* Team Card Layout */
+.team-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Live Game Card Styling */
+.game-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.game-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.team-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.team-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.team-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--primary-color);
+}
+
+.team-score {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.vs-section {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0 10px;
+    align-self: center;
+}
+
+.game-status {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}

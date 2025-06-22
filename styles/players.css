@@ -1,0 +1,245 @@
+/* Players Page Specific Styles */
+:root {
+    --card-width: 280px;
+    --card-height: 380px;
+    --insight-height: 300px;
+}
+
+/* Filters Section */
+.filters-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#player-search {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-controls select {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 0.9em;
+}
+
+/* Players Grid */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Player Card */
+.player-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-header {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.player-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid var(--primary-color);
+}
+
+.player-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 5px 0;
+}
+
+.player-position,
+.player-team {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.player-stats {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stat label {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.stat value {
+    color: var(--primary-color);
+}
+
+.player-actions {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+}
+
+.player-actions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.player-actions button:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Fantasy Insights Section */
+.fantasy-insights-section {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+.fantasy-insights-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.trend-card {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: var(--insight-height);
+}
+
+.trend-card h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.player-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.player-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.player-list-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.player-list-info {
+    flex-grow: 1;
+}
+
+.player-list-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.player-list-detail {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .filter-controls select {
+        width: 100%;
+    }
+
+    .players-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-card {
+        height: auto;
+        min-height: var(--card-height);
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-card {
+        min-height: auto;
+    }
+
+    .player-actions {
+        flex-direction: column;
+    }
+
+    .player-actions button {
+        width: 100%;
+    }
+}

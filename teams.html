@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NFL Teams Analysis and Betting Trends">
+    <title>LTR FANTASY - Teams</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/teams.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body data-page="teams">
+    <header>
+        <h1>LTR FANTASY</h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="teams.html" class="current">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="lineups.html">Lineups</a>
+        </nav>
+    </header>
+
+    <main role="main" class="main-content">
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="search-container">
+                <input type="text" id="team-search" placeholder="Search teams..." aria-label="Search teams">
+            </div>
+            <div class="filter-controls">
+                <select id="conference-filter" aria-label="Filter by conference">
+                    <option value="ALL">All Conferences</option>
+                    <option value="AFC">AFC</option>
+                    <option value="NFC">NFC</option>
+                </select>
+                <select id="division-filter" aria-label="Filter by division">
+                    <option value="ALL">All Divisions</option>
+                    <option value="North">North</option>
+                    <option value="South">South</option>
+                    <option value="East">East</option>
+                    <option value="West">West</option>
+                </select>
+                <select id="sort-options" aria-label="Sort teams">
+                    <option value="winPercentage">Sort by Win %</option>
+                    <option value="pointsPerGame">Sort by Points/Game</option>
+                    <option value="atsRecord">Sort by ATS Record</option>
+                    <option value="overUnder">Sort by Over/Under</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Teams Grid -->
+        <section class="teams-section">
+            <div id="teams-container" class="teams-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Betting Trends Section -->
+        <section class="betting-trends-section">
+            <h2>League-wide Betting Trends</h2>
+            <div id="league-trends" class="trends-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by ESPN API • Updated: <span id="last-updated">Loading...</span></p>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

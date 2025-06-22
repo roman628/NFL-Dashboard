@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NFL Players Stats and Fantasy Analysis">
+    <title>LTR FANTASY - Players</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/players.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body data-page="players">
+    <header>
+        <h1>LTR FANTASY</h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html" class="current">Players</a>
+            <a href="lineups.html">Lineups</a>
+        </nav>
+    </header>
+
+    <main role="main" class="main-content">
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="search-container">
+                <input type="text" id="player-search" placeholder="Search players..." aria-label="Search players">
+            </div>
+            <div class="filter-controls">
+                <select id="position-filter" aria-label="Filter by position">
+                    <option value="ALL">All Positions</option>
+                    <option value="QB">Quarterbacks</option>
+                    <option value="RB">Running Backs</option>
+                    <option value="WR">Wide Receivers</option>
+                    <option value="TE">Tight Ends</option>
+                    <option value="K">Kickers</option>
+                    <option value="DEF">Defense</option>
+                </select>
+                <select id="team-filter" aria-label="Filter by team">
+                    <option value="ALL">All Teams</option>
+                    <!-- Dynamically populated by JavaScript -->
+                </select>
+                <select id="sort-options" aria-label="Sort players">
+                    <option value="fantasyPoints">Sort by Fantasy Points</option>
+                    <option value="position">Sort by Position</option>
+                    <option value="team">Sort by Team</option>
+                    <option value="recentPerformance">Sort by Recent Performance</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Players Grid -->
+        <section class="players-section">
+            <div id="players-container" class="players-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Fantasy Insights Section -->
+        <section class="fantasy-insights-section">
+            <h2>Fantasy Insights</h2>
+            <div class="insights-grid">
+                <div class="trend-card weekly-leaders">
+                    <h3>Weekly Leaders</h3>
+                    <div id="weekly-leaders-list">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="trend-card value-picks">
+                    <h3>Value Picks</h3>
+                    <div id="value-picks-list">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="trend-card injury-report">
+                    <h3>Injury Report</h3>
+                    <div id="injury-report-list">
+                        <!-- Dynamically populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by ESPN API • Updated: <span id="last-updated">Loading...</span></p>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

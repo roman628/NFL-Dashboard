@@ -1,0 +1,56 @@
+<!-- lineups.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTR Fantasy - Lineups</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/lineups.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body data-page="lineups">
+    <header>
+        <h1>LTR FANTASY</h1>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="lineups.html" class="current">Lineups</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="lineup-builder">
+            <h2>Build Your Lineup</h2>
+            <div id="lineup-container">
+                <!-- Lineup positions will be dynamically populated here -->
+            </div>
+            <form class="lineup-form">
+                <input type="text" id="lineup-name" placeholder="Lineup Name" required>
+                <div class="lineup-actions">
+                    <button type="submit" data-action="save">Save Lineup</button>
+                    <button type="button" data-action="clear">Clear Lineup</button>
+                    <button type="button" data-action="export">Export Lineup</button>
+                    <input type="file" data-action="import" accept=".json">
+                    <button type="button" data-action="reset-all">Reset All Data</button>
+                </div>
+            </form>
+            <div id="total-projected-points"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by ESPN API • Updated: <span id="last-updated">Loading...</span></p>
+    </footer>
+
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+    </div>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

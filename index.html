@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NFL Fantasy Sports and Betting Analysis Dashboard">
+    <title>LTR FANTASY - NFL Analysis Hub</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/homepage.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body data-page="dashboard">
+    <header>
+        <h1>LTR FANTASY</h1>
+        <nav class="menu">
+            <a href="index.html" class="current">Home</a>
+            <a href="teams.html">Teams</a>
+            <a href="players.html">Players</a>
+            <a href="lineups.html">Lineups</a>
+        </nav>
+    </header>
+
+    <main role="main" class="main-content">
+        <!-- Live Games Section -->
+        <section class="section live-games" aria-label="Live Games">
+            <h2>Live Games</h2>
+            <div id="live-games-container" class="games-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Top Teams Section -->
+        <section class="section top-teams" aria-label="Top Teams">
+            <h2>Top Teams</h2>
+            <div class="teams-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Top Players Section -->
+        <section class="section top-players" aria-label="Top Players">
+            <h2>Top Players</h2>
+            <div class="players-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Fantasy Insights Section -->
+        <section class="section fantasy-insights" aria-label="Fantasy Insights">
+            <h2>Fantasy Insights</h2>
+            <div id="insights-container" class="insights-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Betting Trends Section -->
+        <section class="section betting-trends" aria-label="Betting Trends">
+            <h2>Betting Trends</h2>
+            <div id="trends-container" class="trends-grid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Data provided by ESPN API • Updated: <span id="last-updated">Loading...</span></p>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
